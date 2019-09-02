@@ -2,10 +2,13 @@
   "name": "frontend-dynamic-form-builder",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for frontend-dynamic-form-builder goes here",
-  "repository": "",
+  "description": "Frontend to build dynamic forms",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lblod/frontend-dynamic-form-builder.git"
+  },
   "license": "MIT",
-  "author": "",
+  "author": "redpencil.io",
   "directories": {
     "doc": "doc",
     "test": "tests"
