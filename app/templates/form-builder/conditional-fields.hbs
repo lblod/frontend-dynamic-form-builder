@@ -1,0 +1,155 @@
+<div class="u-border--light--bottom">
+	<ul class="inline-list inline-list--bordered smaller u-background--gray-lightest u-padding--rl--small u-padding--tb--tiny">
+		<li>{{#link-to "forms"}}Formulieren overzicht{{/link-to}}</li>
+		<li>{{#link-to "form-builder.form-builder-filled-out"}}Formulier: Besluitenlijst{{/link-to}}</li>
+		<li>Koppel conditionele veldengroep aan <strong>1. Tekstveld &mdash; Tekstveld label</strong></li>
+	</ul>
+</div>
+<div class="container-flex--scroll">
+	<div class="u-padding--round--small u-border--light--bottom">
+		<div class="grid">
+			<div class="col--8-12">
+				<h1 class="h5">Koppel conditionele veldengroep aan <strong>1. Tekstveld &mdash; Tekstveld label</strong></h1>
+			</div>
+			<div class="col--4-12 u-align-right--tablet-portrait-up">
+				<div class="button-group">
+					{{#link-to "form-builder.form-builder-filled-out" class="button button--alt button--small"}}Annuleer{{/link-to}}
+					{{#link-to "form-builder.form-builder-filled-out" class="button button--alt button--small"}}Verwerp wijzigingen{{/link-to}}
+					{{#link-to "form-builder.form-builder-filled-out" class="button button--small"}}Bewaar{{/link-to}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-field">
+		<span class="form-field__drag">
+		</span>
+		<div class="grid">
+			<div class="col--3-12">
+				<p>Als de inhoud gelijk is aan</p>
+			</div>
+			<div class="col--4-12">
+				{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Vrije tekst"}}
+      </div>
+      <div class="col--4-12 u-align-right--tablet-portrait-up">
+      	<div class="button-group">
+	      	<button class="button button--alt button--tiny">
+	      		<i class="fa fa-plus"></i> Voeg optie toe
+	      	</button>
+	      	<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+	      </div>
+      </div>
+    </div>
+		<div class="grid">
+			<div class="col--3-12">
+				<p>of gelijk is aan</p>
+			</div>
+			<div class="col--4-12">
+				{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Andere vrije tekst"}}
+      </div>
+      <div class="col--4-12">
+      	<div class="button-group">
+	      	<a class="button button--alt button--small button--link button--link--dark"><i class="fa fa-trash-o"></i> Verwijder optie</a>
+	      </div>
+      </div>
+    </div>
+		<div class="grid">
+			<div class="col--3-12">
+				<p>of gelijk is aan</p>
+			</div>
+			<div class="col--4-12">
+				{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Nog andere vrije tekst"}}
+      </div>
+      <div class="col--4-12">
+      	<div class="button-group">
+	      	<a class="button button--alt button--small button--link button--link--dark"><i class="fa fa-trash-o"></i> Verwijder optie</a>
+	      </div>
+      </div>
+    </div>
+		<div class="grid">
+			<div class="col--3-12">
+				<p>toon conditionele veldengroep</p>
+			</div>
+			<div class="col--4-12">
+				<select class="select select--block" id="select-demo" name="select">
+				  <option value=""></option>
+			    <option value="1" selected>Naam conditionele veldengroep</option>
+				</select>
+				<p class="smaller">U kan enkel velden kiezen die <strong>na</strong> dit veld in het formulier staan.</p>
+      </div>
+    </div>
+	</div>
+
+	<div class="form-field form-field--active">
+		<span class="form-field__drag">
+		</span>
+		<div class="grid">
+			<div class="col--3-12">
+				<p>Als de inhoud gelijk is aan</p>
+			</div>
+			<div class="col--4-12">
+				{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Vrije tekst twee"}}
+      </div>
+      <div class="col--4-12 u-align-right--tablet-portrait-up">
+      	<div class="button-group">
+	      	<button class="button button--alt button--tiny">
+	      		<i class="fa fa-plus"></i> Voeg optie toe
+	      	</button>
+	      	<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+	      </div>
+      </div>
+    </div>
+		<div class="grid">
+			<div class="col--3-12">
+				<p>toon conditionele veldengroep</p>
+			</div>
+			<div class="col--4-12">
+				<select class="select select--block" id="select-demo" name="select" disabled>
+				  <option value="">Geen conditionele veldengroep aangemaakt</option>
+				</select>
+				<p class="smaller">Er zijn geen conditionele velden beschikbaar. Voeg een conditionele veldengroep toe in uw formulier.</p>
+      </div>
+    </div>
+	</div>
+
+	<div class="form-field">
+		<span class="form-field__drag">
+		</span>
+		<div class="grid">
+			<div class="col--3-12">
+				<p>Als de inhoud gelijk is aan</p>
+			</div>
+			<div class="col--4-12">
+				{{input class="input-field input-field--block u-spacer--bottom--tiny"}}
+      </div>
+      <div class="col--4-12 u-align-right--tablet-portrait-up">
+      	<div class="button-group">
+	      	<button class="button button--alt button--tiny">
+	      		<i class="fa fa-plus"></i> Voeg optie toe
+	      	</button>
+	      	<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+	      </div>
+      </div>
+    </div>
+		<div class="grid">
+			<div class="col--3-12">
+				<p>toon conditionele veldengroep</p>
+			</div>
+			<div class="col--4-12">
+				<select class="select select--block" id="select-demo" name="select">
+				  <option value=""></option>
+			    <option value="1">Naam conditionele veldengroep</option>
+				</select>
+				<p class="smaller">U kan enkel velden kiezen die <strong>na</strong> dit veld in het formulier staan.</p>
+      </div>
+    </div>
+	</div>
+	<div class="u-padding--round">
+		<button class="button button--icon button--circle">
+			<i class="fa fa-plus button__icon"></i>
+			<span class="button--circle__text">Voeg logica sprong toe</span>
+		</button>
+	</div>
+
+</div>
+{{outlet}}

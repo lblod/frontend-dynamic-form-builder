@@ -1,0 +1,247 @@
+<div class="u-border--light--bottom u-background--gray-lightest u-padding--rl--small u-padding--tb--tiny">
+	<div class="grid">
+		<div class="col--8-12">
+			<ul class="inline-list inline-list--bordered smaller">
+				<li>{{#link-to "forms"}}<i class="fa fa-arrow-left u-spacer--right--tiny"></i> Formulieren overzicht{{/link-to}}</li>
+				<li>Besluitenlijst</li>
+			</ul>
+		</div>
+		<div class="col--4-12 u-align-right--tablet-portrait-up">
+			<div class="button-group u-spacer--none">
+				{{#link-to "forms" class="button button--small button--alt u-spacer--bottom--none"}}
+					Verwijder concept
+				{{/link-to}}
+				{{#link-to "form-builder.form-builder-activate" class="button button--small button--alt button--alt--blue u-spacer--bottom--none"}}
+					<i class="fa fa-bullhorn"></i>Activeer
+				{{/link-to}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-flex--contain">
+	<div class="grid grid--collapse">
+		<div class="col--6-12">
+			<div class="container-flex--scroll">
+				<div class="u-padding--round--small u-border--light--bottom">
+					<div class="grid">
+						<div class="col--8-12">
+							<h1 class="h6 u-spacer--bottom--tinier">Formulier: Besluitenlijst</h1>
+							<p class="smaller">Korte omschrijving van het formulier die zichtbaar is in het overzicht.</p>
+						</div>
+						<div class="col--4-12 u-align-right--tablet-portrait-up">
+							{{#link-to "form-builder.form-builder-edit-settings" class="button button--tiny button--alt"}}
+								<i class="fa fa-pencil button__icon"></i>&nbsp;&nbsp;Bewerk gegevens
+							{{/link-to}}
+						</div>
+					</div>
+
+					<div class="u-spacer--top--tiny">
+						<label class="pill u-spacer--right--tiny">
+							Gemeente
+						</label>
+						<label class="pill u-spacer--right--tiny">
+							District
+						</label>
+						<label class="pill u-spacer--right--tiny">
+							Provincie
+						</label>
+						<label class="pill u-spacer--right--tiny">
+							IGS
+						</label>
+						<label class="pill u-spacer--right--tiny">
+							HVZ
+						</label>
+						<label class="pill u-spacer--right--tiny">
+							PZ
+						</label>
+						<label class="pill u-spacer--right--tiny">
+							OCMW
+						</label>
+						<label class="pill u-spacer--right--tiny">
+							OCMWV
+						</label>
+						<label class="pill u-spacer--right--tiny">
+							AGB
+						</label>
+						<label class="pill u-spacer--right--tiny">
+							APB
+						</label>
+					</div>
+
+					<div class="u-spacer--top--small">
+						<label class="form__label" for="select">Type dossier</label>
+						<select class="select select--small select--block" id="select-demo" name="select">
+						  <option value="">-- Dropdown met zoekfunctie --</option>
+					    <option value="1">Advies bij jaarrekening AGB</option>
+					    <option value="2">Advies bij jaarrekening eredientsbestuur</option>
+					    <option value="3">Advies bij samenvoeging eredienstbesturen</option>
+					    <option value="4">Reglementen en verordeningen</option>
+					    <option value="5">Besluitenlijst</option>
+						</select>
+						<p class="smaller u-spacer--top--tiny text-fade">Voor welk type dossier mag dit formulier ingevuld worden?</p>
+					</div>
+				</div>
+
+				<div class="u-padding--round--small u-spacer--top">
+					<div class="grid">
+						<div class="col--6-12">
+							<button class="button button--icon button--circle">
+								<i class="fa fa-plus button__icon"></i>
+								<span class="button--circle__text">Voeg veld toe</span>
+							</button>
+							<div class="popover js-popover js-popover--open">
+								<div class="popover__content" style="right: auto;">  {{!-- u-padding--top--none --}}
+	{{!-- 								<div class="input-field-icon-container--right">
+										<input class="input-field input-field--block" id="input-field" type="text" placeholder="zoekveld optioneel">
+										<i class="input-field__icon vi vi-magnifier" aria-hidden="true"></i>
+									</div> --}}
+									<ul>
+										<li>
+											{{#link-to "form-builder.form-builder-filled-out" class="popover__link"}}
+												Dropdown
+											{{/link-to}}
+										</li>
+										<li>
+											{{#link-to "form-builder.form-builder-filled-out" class="popover__link"}}
+												Korte tekst
+											{{/link-to}}
+										</li>
+										<li>
+											{{#link-to "form-builder.form-builder-filled-out" class="popover__link"}}
+												Datum
+											{{/link-to}}
+										</li>
+										<li>
+											{{#link-to "form-builder.form-builder-filled-out" class="popover__link"}}
+												Documenten opladen
+											{{/link-to}}
+										</li>
+										<li>
+											{{#link-to "form-builder.form-builder-filled-out" class="popover__link"}}
+												Links toevoegen
+											{{/link-to}}
+										</li>
+										<li>
+											{{#link-to "form-builder.form-builder-filled-out" class="popover__link"}}
+												Checkbox
+											{{/link-to}}
+										</li>
+										<li>
+											{{#link-to "form-builder.form-builder-filled-out" class="popover__link"}}
+												Radio knoppen
+											{{/link-to}}
+										</li>
+										<li>
+											{{#link-to "form-builder.form-builder-filled-out" class="popover__link"}}
+												Lange tekst
+											{{/link-to}}
+										</li>
+										<li>
+											{{#link-to "form-builder.form-builder-filled-out" class="popover__link"}}
+												Aanslagvoet
+											{{/link-to}}
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col--6-12">
+							{{#link-to "form-builder.conditional-fields" class="button button--alt button--icon button--circle"}}
+								<i class="fa fa-plus button__icon"></i>
+								<span class="button--circle__text">Maak conditionele veldengroep</span>
+							{{/link-to}}
+						</div>
+					</div>
+				</div>
+
+
+{{!-- 				<div class="u-padding--left--large u-padding--tb">
+					<div class="grid">
+						<div class="col--11-12">
+							<label class="form__label" for="select">Type dossier</label>
+							<select class="select select--small select--block" id="select-demo" name="select">
+							  <option value="">-- Dropdown met zoekfunctie --</option>
+						    <option value="1">Advies bij jaarrekening AGB</option>
+						    <option value="2">Advies bij jaarrekening eredientsbestuur</option>
+						    <option value="3">Advies bij samenvoeging eredienstbesturen</option>
+						    <option value="4">Reglementen en verordeningen</option>
+						    <option value="5" selected>Besluitenlijst</option>
+							</select>
+							<p class="smaller u-spacer--top--tinier text-fade">Voor welk type dossier mag dit formulier ingevuld worden?</p>
+						</div>
+					</div>
+				</div> --}}
+
+			</div>
+		</div>
+		<div class="col--6-12">
+			<div class="u-background--gray-lightest container-flex--scroll u-padding--round">
+				<h1 class="h6 uppercase title--alt u-border--light--bottom">Formulier: Besluitenlijst</h1>
+				<p class="u-align-center text-fade u-height-vh u-v-align-center">
+					Nog geen voorbeeld te zien.
+					<br>
+					Voeg links velden toe om hier de voorvertoning te bekijken.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+{{outlet}}
+
+
+<div class="modal">
+	<div class="modal-overlay">
+		<div class="modal-dialog modal-dialog--wide modal-dialog--sectioned">
+		  <div class="modal-dialog__header">
+		    <div class="grid">
+		      <div class="col--10-12">
+		        Activeer formulier <strong>Besluitenlijst</strong>
+		      </div>
+	        <div class="col--2-12 u-align-right--tablet-portrait-up">
+	        	<div class="button-group">
+	          	{{#link-to "forms" class="link--icon--close"}}
+	            	<span class="u-visually-hidden">Venster sluiten</span>
+	          	{{/link-to}}
+	          </div>
+	        </div>
+		    </div>
+		  </div>
+
+		  <div class="modal-dialog__content">
+				<p class="u-spacer--small">Het formulier <strong>Besluitenlijst</strong> zal zichtbaar zijn voor volgende bestuursorganen:</p>
+				<div class="u-spacer">
+		    	<div class="grid">
+		    		<div class="col--4-12">
+			      	<div>{{wu-checkbox label="Gemeente"}}</div>
+							<div>{{wu-checkbox label="District"}}</div>
+							<div>{{wu-checkbox label="Provincie"}}</div>
+							<br>
+							<div>{{wu-checkbox label="Intergemeentelijke samenwerking (IGS)"}}</div>
+							<div>{{wu-checkbox label="Hulpverleningszone (HVZ)"}}</div>
+							<div>{{wu-checkbox label="Politiezone (PZ)"}}</div>
+			      </div>
+		    		<div class="col--4-12">
+							<div>{{wu-checkbox label="Openbaar Centrum voor Maatschappelijk Welzijn (OCMW)"}}</div>
+							<div>{{wu-checkbox label="Openbaar Centrum voor Maatschappelijk Welzijn Vereniging (OCMWV)"}}</div>
+			      </div>
+		    		<div class="col--4-12">
+							<div>{{wu-checkbox label="Autonoom Gemeentebedrijf (AGB)"}}</div>
+							<div>{{wu-checkbox label="Autonome Provinciebedrijven  (APB)"}}</div>
+			      </div>
+			    </div>
+			  </div>
+		  </div>
+		  <div class="modal-dialog__footer">
+		  	<div class="button-group">
+		    	{{#link-to "form-builder.form-builder-filled-out" class="button button--narrow"}}
+		    		Activeer
+		    	{{/link-to}}
+		    	{{#link-to "form-builder.form-builder-blank" class="button button--narrow button--alt"}}
+		    		Annuleer
+		    	{{/link-to}}
+		    </div>
+		  </div>
+		</div>
+	</div>
+</div>

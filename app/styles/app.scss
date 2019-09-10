@@ -1,0 +1,319 @@
+/* ==========================================================================
+  Colors
+  Only define colors here. Don't use sass color functions, stick to hex values,
+  or the color component in styleguide won't regenerate automatically anymore.
+ ========================================================================== */
+
+/* Base colors
+ ========================================================================== */
+
+$primary-yellow:        #FEE539;
+$primary-blue:          #0F68C9;
+
+$black:                 #000;
+$white:                 #fff;
+
+/* Simple gray
+ ========================================================================== */
+
+$gray-dark:             #333333;
+$gray:                  #666666;
+$gray-light:            #B2B2B2;
+$gray-lighter:          #CCCCCC;
+$gray-lightest:         #DDDDDD;
+
+/* Blue gray
+ ========================================================================== */
+
+$blue-gray-dark:        #79838F;
+$blue-gray:             #A5B3C2;
+$blue-gray-light:       #CBD2DA;
+$blue-gray-lighter:     #E8EBEE;
+$blue-gray-lightest:    #F3F5F6;
+
+
+/* Alert colors
+ ========================================================================== */
+
+$red:                   #DB3434;
+$red-light:             #F33;
+
+$green:                 #8BAE00;
+$green-light:           #B3E000;
+
+$orange:                #FFC515;
+$orange-light:          #FFE843;
+
+
+
+
+
+.u-height-vh {
+	height: 100vh;
+}
+
+.u-v-align-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button--circle.button--icon {
+	width: 3.55rem;
+	height: 3.5rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	border-radius: 100%;
+
+	.button--circle__text {
+		color: gray;
+		padding-left: 1.5rem;
+		transition: color 200ms;
+	}
+
+	&:hover {
+		.button--circle__text {
+			color: black;
+		}
+	}
+
+	&.button--small {
+		width: 2.55rem;
+		height: 2.5rem;
+		padding: 0.05rem 0.55rem;
+	}
+}
+
+.form-field {
+	display: block;
+	border-bottom: 1px solid $blue-gray-lighter;
+	border-top: 1px solid $blue-gray-lightest;
+	padding: 2rem 0 2rem 4.2rem;
+	position: relative;
+
+	.form-field__drag {
+		left: 0;
+		top: 0;
+		bottom: 0;
+		display: block;
+		width: 4rem;
+		position: absolute;
+		z-index: 2;
+		transition: box-shadow 200ms;
+
+		&:hover {
+			cursor: move;
+			box-shadow: inset 5px 0px $blue-gray-light;
+
+			&:after {
+				color: $gray;
+			}
+		}
+
+		&:after {
+			content: "\f142 \f142";
+			display: block;
+			font-family: "fontawesome";
+			color: $gray-light;
+			position: absolute;
+			left: 2rem;
+			top: 2.4rem;
+			font-size: 1.2rem;
+			letter-spacing: 1.5px;
+			pointer-events: none;
+			transition: color 200ms;
+			transition: opacity 200ms;
+			opacity: 0;
+		}
+	}
+
+	.form-field__actions {
+		opacity: 0;
+		transition: opacity 200ms;
+	}
+
+	.form-field__conditions-info {
+		transition: opacity 200ms;
+	}
+
+	.form-field--active .form-field__conditions-info
+	&:not(.form-field--active):hover .form-field__conditions-info {
+		opacity: 0;
+	}
+
+	&:not(.form-field--active):hover .form-field__actions,
+	&:not(.form-field--active):hover .form-field__drag:after {
+		// opacity: 0.7;
+		opacity: 1;
+	}
+}
+
+.form-field--active {
+	box-shadow: inset 3px 0px $primary-blue, 0px 3px 3px $blue-gray-lightest;
+
+	.form-field__drag,
+	.form-field__drag:hover {
+		box-shadow: inset 5px 0px $primary-blue;
+	}
+
+	.form-field__drag:after,
+	.form-field__actions {
+		opacity: 1;
+	}
+}
+
+.form__row--required {
+  label.form__label,
+  .upload__element {
+    position: relative;
+    display: block;
+
+    &:after {
+      content: "Verplicht";
+      right: 0;
+      position: absolute;
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-size: 1.2rem;
+      top: 0.1rem;
+      color: #333333;
+      background-color: #E8EBEE;
+      border-radius: 3px;
+      padding: 0.4rem 0.3rem 0.3rem 0.4rem;
+      line-height: 1;
+    }
+  }
+
+  .upload__element:after {
+    top: -0.2rem;
+    right: -0.2rem;
+  }
+}
+
+.checkbox--small {
+	line-height: 1.8;
+	font-size: 1.4rem;
+
+	.checkbox__toggle {
+		margin-left: -0.2rem;
+	}
+
+	.checkbox__toggle + span {
+		margin: 0 0.2rem 0 0;
+	}
+}
+
+.form__row--conditional-field {
+	margin-bottom: 1rem;
+}
+
+.form__row--conditional-field--inactive {
+	padding: 1rem;
+	border: 1px dashed $red;
+	background-color: rgba($red, 0.1);
+
+	&:after {
+		content: "Niet zichtbaar. Voeg velden toe aan de groep, en koppel de veldengroep vervolgens aan een gewoon veld.";
+		display: block;
+		margin-top: 1rem;
+		font-size: 1;
+		line-height: 1.2;
+	}
+}
+
+.form-field--conditional-fields__field {
+	border-left: 1px solid $blue-gray-light;
+	padding: 2rem 1rem 2.5rem 2rem;
+	margin-right: 1rem;
+	border-bottom: 1px dashed $blue-gray-light;
+	position: relative;
+	transition: background-color 200ms;
+
+	&:first-child {
+		border-top: 1px dashed $blue-gray-light;
+	}
+
+	&:hover {
+		background-color: $blue-gray-lightest;
+	}
+
+	.form-field__drag {
+		left: 0;
+		top: 0;
+		bottom: 0;
+		display: block;
+		width: 4rem;
+		position: absolute;
+		z-index: 2;
+		transition: box-shadow 200ms;
+
+		&:after {
+			content: "\f142 \f142";
+			display: block;
+			font-family: "fontawesome";
+			color: $gray-light;
+			position: absolute;
+			left: 0.5rem;
+			top: 2.8rem;
+			font-size: 1.2rem;
+			letter-spacing: 1.5px;
+			pointer-events: none;
+			transition: color 200ms;
+		}
+
+		&:hover {
+			box-shadow: none;
+		}
+
+		&:hover:after {
+			color: $gray;
+		}
+	}
+}
+
+.form-field__content {
+	margin-top: 1rem;
+
+	.form__label {
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.form-field__content:first-child {
+		margin-top: 4rem;
+	}
+}
+
+.form-field--conditional-fields__content .form-field--conditional-fields__field:first-child {
+	margin-top: 2rem;
+}
+
+.form-field__footer {
+	margin-top: 2.5rem;
+}
+
+.form-field__header + .form-field--conditional-fields__footer:before {
+	content: "Voeg velden toe en koppel de groep aan een ander veld om de groep zichtbaar te maken in het formulier.";
+	color: $blue-gray-dark;
+	margin: 1rem 0 3rem;
+	max-width: 40rem;
+	display: block;
+	font-size: 1.5rem;
+}
+
+
+/* temporary for mockup */
+
+.popover {
+	position: absolute;
+}
+
+.form__row--taxrates-input .data-table {
+	border-top: 1px solid $blue-gray-light;
+}
+
+.form__row--taxrates-input .data-table td,
+.form__row--file-addresses .data-table {
+	background-color: rgba($blue-gray, 0.2);
+}

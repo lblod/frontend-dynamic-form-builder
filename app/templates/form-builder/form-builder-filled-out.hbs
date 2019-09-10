@@ -1,0 +1,1139 @@
+<div class="u-border--light--bottom u-background--gray-lightest u-padding--rl--small u-padding--tb--tiny">
+	<div class="grid">
+		<div class="col--8-12">
+			<ul class="inline-list inline-list--bordered smaller">
+				<li>{{#link-to "forms"}}<i class="fa fa-arrow-left u-spacer--right--tiny"></i> Formulieren overzicht{{/link-to}}</li>
+				<li>Besluitenlijst</li>
+			</ul>
+		</div>
+		<div class="col--4-12 u-align-right--tablet-portrait-up">
+			<div class="button-group u-spacer--none">
+				{{#link-to "forms" class="button button--small button--alt u-spacer--bottom--none"}}
+					Verwijder concept
+				{{/link-to}}
+				{{#link-to "form-builder.form-builder-deactivate" class="button button--small button--alt button--alt--warning u-spacer--bottom--none"}}
+					<i class="fa fa-ban"></i>Deactiveer
+				{{/link-to}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-flex--contain">
+	<div class="grid grid--collapse">
+		<div class="col--6-12">
+			<div class="container-flex--scroll">
+				<div class="u-padding--rl--small u-padding--tb--large u-border--light--bottom">
+					<div class="grid">
+						<div class="col--9-12">
+							<h1 class="h6 u-spacer--bottom--tinier">Formulier: Besluitenlijst</h1>
+							<p class="smaller">Korte omschrijving van het formulier die zichtbaar is in het overzicht.</p>
+							<p class="smaller text-fade">Zichtbaar voor: Gemeente, District, Provincie, IGS, HVZ, PZ, OCMW, OCMWV, AGB, APB</p>
+
+							<div class="u-spacer--top--tiny">
+								<label class="form__label" for="select">Voor welk type dossier mag dit formulier ingevuld worden?</label>
+								<select class="select select--small select--block" id="select-demo" name="select">
+								  <option value="">-- Dropdown met zoekfunctie --</option>
+							    <option value="1">Advies bij jaarrekening AGB</option>
+							    <option value="2">Advies bij jaarrekening eredientsbestuur</option>
+							    <option value="3">Advies bij samenvoeging eredienstbesturen</option>
+							    <option value="4">Reglementen en verordeningen</option>
+							    <option value="5" selected>Besluitenlijst</option>
+								</select>
+							</div>
+
+						</div>
+						<div class="col--3-12 u-align-right--tablet-portrait-up">
+							{{#link-to "form-builder.form-builder-edit-settings" class="button button--tiny button--alt"}}
+								<i class="fa fa-pencil button__icon"></i>&nbsp;&nbsp;Bewerk gegevens
+							{{/link-to}}
+						</div>
+					</div>
+				</div>
+
+				<div class="form-field form-field--active">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Tekstveld</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+
+								<div class="popover js-popover js-popover--open">
+									<div class="popover__content" style="left: auto;">
+										<ul>
+											<li>
+												<a href="#" class="popover__link">
+													<i class="fa fa-trash-o u-padding--rl--tiny"></i> Verwijder veld
+												</a>
+												<a href="#" class="popover__link">
+													<i class="fa fa-copy u-padding--rl--tiny"></i> Dupliceer
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+			      		<label class="form__label">Label voor tekstveld
+				        	{{input class="input-field input-field--block" value="Tekstveld label"}}
+				        </label>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+			      </div>
+			    </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Dropdown</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+			      		<label class="form__label">Label voor dropdown
+				        	{{input class="input-field input-field--block" value="Dropdown label"}}
+				        </label>
+			      		<label class="form__label">Beschikbare opties
+									<select class="select select--small select--block" id="select-demo" name="select">
+									  <option value="">-- Dropdown met zoekfunctie --</option>
+										<option value="1">Type reglementen verordeningen (toezicht-inzending-type)  &mdash; Korte beschrijving</option>
+										<option value="2">Bestuursorgaan (toezicht-bestuursorgaan)  &mdash; Korte beschrijving</option>
+										<option value="3">Nomenclatuur (toezicht-nomenclature)  &mdash; Korte beschrijving</option>
+									</select>
+				        </label>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Radio</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+				    		<label class="form__label">Radioknoppen label (optioneel)
+				        	{{input class="input-field input-field--block" value="Radioknoppen label"}}
+			       		</label>
+			      		<label class="form__label">Label radioknop 1
+				        	{{input class="input-field input-field--block" value="Ja"}}
+				        </label>
+			      		<label class="form__label">Label radioknop 2
+				        	{{input class="input-field input-field--block" value="Nee"}}
+				        </label>
+				        <button class="button button--tiny button--alt u-spacer--small">
+				        	<i class="fa fa-plus"></i>Voeg optie toe
+				        </button>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Checkbox</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+				    		<label class="form__label">Checkbox label (optioneel)
+				        	{{input class="input-field input-field--block" value="Checkbox label"}}
+			       		</label>
+			      		<label class="form__label">Label checkbox 1
+				        	{{input class="input-field input-field--block" value="Ja"}}
+				        </label>
+			      		<label class="form__label">Label checkbox 2
+				        	{{input class="input-field input-field--block" value="Nee"}}
+				        </label>
+				        <button class="button button--tiny button--alt u-spacer--small">
+				        	<i class="fa fa-plus"></i>Voeg optie toe
+				        </button>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Textarea</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+				    		<label class="form__label">Textarea label
+				        	{{input class="input-field input-field--block" value="Textarea label"}}
+			       		</label>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Documenten opladen</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+				    		<label class="form__label">Documenten opladen label
+				        	{{input class="input-field input-field--block" value="Documenten opladen label"}}
+			       		</label>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Links naar documenten</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+				    		<label class="form__label">Links naar documenten label
+				        	{{input class="input-field input-field--block" value="Links naar documenten label"}}
+			       		</label>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Aanslagvoet</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+				    		<label class="form__label">Aanslagvoet label
+				        	{{input class="input-field input-field--block" value="Aanslagvoet label"}}
+			       		</label>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Datum</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+				    		<label class="form__label">Datum label
+				        	{{input class="input-field input-field--block" value="Datum label"}}
+			       		</label>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">1. Date range</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+				    		<label class="form__label">Date range label veld 1
+				        	{{input class="input-field input-field--block" value="Date range label veld 1"}}
+			       		</label>
+				    		<label class="form__label">Date range label veld 2
+				        	{{input class="input-field input-field--block" value="Date range label veld 1"}}
+			       		</label>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="form-field">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">2. Tekstveld</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content">
+						<div class="grid">
+							<div class="col--9-12">
+			      		<label class="form__label">Label voor tekstveld
+				        	{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Tweede tekstveld label"}}
+				        </label>
+			      		<label class="form__label">Beschrijving
+			      			{{textarea cols="40" rows="4" class="textarea textarea--block" value="Dit is wat informatie."}}
+				        </label>
+				        <div class="grid">
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" checked="true" label="Verplicht"}}
+				        	</div>
+				        	<div class="col--3-12">
+				        		{{wu-checkbox class="checkbox--small" checked="true" label="Beschrijving"}}
+				        	</div>
+				        	<div class="col--6-12 u-align-right--tablet-portrait-up">
+				        	</div>
+				        </div>
+				      </div>
+			      </div>
+			    </div>
+				</div>
+
+				<div class="form-field form-field--conditional-fields">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">3. Conditionele veldengroep</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field--conditional-fields__footer">
+						<div class="grid">
+							<div class="col--6-12">
+								<button class="button button--small button--alt button--alt--blue button--icon button--circle">
+									<i class="fa fa-plus button__icon"></i>
+									<span class="button--circle__text">Voeg veld toe</span>
+								</button>
+							</div>
+							<div class="col--6-12">
+								<button class="button button--small button--alt button--alt--blue button--icon button--circle">
+									<i class="fa fa-plus button__icon"></i>
+									<span class="button--circle__text">Voeg conditionele veldengroep toe</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-field form-field--conditional-fields">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">4. Conditionele veldengroep</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep (3)
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content form-field--conditional-fields__content">
+						<div class="form-field--conditional-fields__field">
+							<span class="form-field__drag">
+							</span>
+
+							<div class="form-field__header">
+								<div class="grid">
+									<div class="col--5-12">
+										<label class="pill pill--white">4.1&nbsp;&nbsp;Tekstveld</label>
+									</div>
+									<div class="col--7-12 u-align-right--tablet-portrait-up form-field__actions">
+				        		<div class="button-group u-spacer--right--tiny">
+											{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+												<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep
+											{{/link-to}}
+					        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+					        	</div>
+
+										<div class="popover js-popover js-popover--open">
+											<div class="popover__content" style="left: auto;">
+												<ul>
+													<li>
+														<a href="#" class="popover__link">
+															<i class="fa fa-trash-o u-padding--rl--tiny"></i> Verwijder veld
+														</a>
+														<a href="#" class="popover__link">
+															<i class="fa fa-copy u-padding--rl--tiny"></i> Dupliceer
+														</a>
+														<a href="#" class="popover__link">
+															<i class="fa fa-sitemap u-padding--rl--tiny"></i> Koppel conditioneel veld
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-field__content">
+								<div class="grid">
+									<div class="col--9-12">
+					      		<label class="form__label">Label voor tekstveld
+						        	{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Label voor tekstveld"}}
+						        </label>
+
+						        <div class="grid">
+						        	<div class="col--3-12">
+						        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+						        	</div>
+						        	<div class="col--3-12">
+						        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+						        	</div>
+						        	<div class="col--6-12 u-align-right--tablet-portrait-up">
+						        	</div>
+						        </div>
+						      </div>
+					      </div>
+					    </div>
+				    </div>
+						<div class="form-field--conditional-fields__field">
+							<span class="form-field__drag">
+							</span>
+
+							<div class="form-field__header">
+								<div class="grid">
+									<div class="col--5-12">
+										<label class="pill pill--white">4.2&nbsp;&nbsp;Tekstveld</label>
+									</div>
+									<div class="col--7-12 u-align-right--tablet-portrait-up form-field__actions">
+				        		<div class="button-group u-spacer--right--tiny">
+											{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+												<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep (3)
+											{{/link-to}}
+					        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+					        	</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-field__content">
+								<div class="grid">
+									<div class="col--9-12">
+					      		<label class="form__label">Label voor tekstveld
+						        	{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Label voor tekstveld"}}
+						        </label>
+
+						        <div class="grid">
+						        	<div class="col--3-12">
+						        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+						        	</div>
+						        	<div class="col--3-12">
+						        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+						        	</div>
+						        	<div class="col--6-12 u-align-right--tablet-portrait-up">
+						        	</div>
+						        </div>
+						      </div>
+					      </div>
+					    </div>
+				    </div>
+				  </div>
+
+					<div class="form-field__footer">
+						<div class="grid">
+							<div class="col--6-12">
+								<button class="button button--small button--alt button--alt--blue button--icon button--circle">
+									<i class="fa fa-plus button__icon"></i>
+									<span class="button--circle__text">Voeg veld toe aan groep</span>
+								</button>
+							</div>
+							<div class="col--6-12">
+								<button class="button button--small button--alt button--alt--blue button--icon button--circle">
+									<i class="fa fa-plus button__icon"></i>
+									<span class="button--circle__text">Voeg conditionele veldengroep toe</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="form-field form-field--conditional-fields">
+					<span class="form-field__drag">
+					</span>
+					<div class="form-field__header">
+						<div class="grid">
+							<div class="col--5-12">
+								<label class="pill">5. Conditionele veldengroep</label>
+							</div>
+							<div class="col--6-12 u-align-right--tablet-portrait-up form-field__actions">
+		        		<div class="button-group">
+									{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+										<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep (3)
+									{{/link-to}}
+			        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+			        	</div>
+{{!-- 								<div class="popover js-popover js-popover--open u-align-left">
+									<div class="popover__content u-padding--round--small" style="left: auto;">
+										<p class="smaller">Verschijnt bij volgende antwoorden:</p>
+										<ul class="bullet-list smaller">
+											<li>1 Tekstveld &mdash; label:<br>vrije tekst <br></li>
+											<li>1 Tekstveld &mdash; label:<br>vrije tekst <br></li>
+											<li>2 Dropdown &mdash; label:<br>vaste waarde<br></li>
+										</ul>
+									</div>
+								</div> --}}
+							</div>
+						</div>
+					</div>
+
+					<div class="form-field__content form-field--conditional-fields__content">
+						<div class="form-field--conditional-fields__field">
+							<span class="form-field__drag">
+							</span>
+
+							<div class="form-field__header">
+								<div class="grid">
+									<div class="col--5-12">
+										<label class="pill pill--white">5.1&nbsp;&nbsp;Tekstveld</label>
+									</div>
+									<div class="col--7-12 u-align-right--tablet-portrait-up form-field__actions">
+				        		<div class="button-group u-spacer--right--tiny">
+					        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+					        	</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-field__content">
+								<div class="grid">
+									<div class="col--9-12">
+					      		<label class="form__label">Label voor tekstveld
+						        	{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Label voor tekstveld"}}
+						        </label>
+
+						        <div class="grid">
+						        	<div class="col--3-12">
+						        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+						        	</div>
+						        	<div class="col--3-12">
+						        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+						        	</div>
+						        	<div class="col--6-12 u-align-right--tablet-portrait-up">
+						        	</div>
+						        </div>
+						      </div>
+					      </div>
+					    </div>
+				    </div>
+
+						<div class="form-field--conditional-fields__field">
+							<span class="form-field__drag">
+							</span>
+							<div class="form-field__header">
+								<div class="grid">
+									<div class="col--5-12">
+										<label class="pill pill--white">5.2&nbsp;&nbsp;Conditionele veldengroep</label>
+									</div>
+									<div class="col--7-12 u-align-right--tablet-portrait-up form-field__actions">
+				        		<div class="button-group u-spacer--right--tiny">
+											{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+												<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep (3)
+											{{/link-to}}
+					        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+					        	</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-field__content">
+								<div class="form-field--conditional-fields__field">
+									<span class="form-field__drag">
+									</span>
+									<div class="form-field__header">
+										<div class="grid">
+											<div class="col--5-12">
+												<label class="pill pill--white">5.2.1&nbsp;&nbsp;Tekstveld</label>
+											</div>
+											<div class="col--7-12 u-align-right--tablet-portrait-up form-field__actions">
+						        		<div class="button-group u-spacer--right--tiny">
+													{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+														<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep (3)
+													{{/link-to}}
+							        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+							        	</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-field__content">
+										<div class="grid">
+											<div class="col--9-12">
+							      		<label class="form__label">Label voor tekstveld
+								        	{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Label voor tekstveld"}}
+								        </label>
+
+								        <div class="grid">
+								        	<div class="col--3-12">
+								        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+								        	</div>
+								        	<div class="col--3-12">
+								        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+								        	</div>
+								        	<div class="col--6-12 u-align-right--tablet-portrait-up">
+								        	</div>
+								        </div>
+								      </div>
+							      </div>
+							    </div>
+								</div>
+
+								<div class="form-field--conditional-fields__field">
+									<span class="form-field__drag">
+									</span>
+									<div class="form-field__header">
+										<div class="grid">
+											<div class="col--5-12">
+												<label class="pill pill--white">5.2.2&nbsp;&nbsp;Select</label>
+											</div>
+											<div class="col--7-12 u-align-right--tablet-portrait-up form-field__actions">
+						        		<div class="button-group u-spacer--right--tiny">
+													{{#link-to "form-builder.conditional-fields" class="button button--alt button--tiny"}}
+														<i class="fa fa-sitemap"></i> Koppel conditionele veldengroep (3)
+													{{/link-to}}
+							        		<a class="button--link link--dark"><i class="fa fa-ellipsis-v button__icon u-padding--rl--tinier"></i></a>
+							        	</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-field__content">
+										<div class="grid">
+											<div class="col--9-12">
+							      		<label class="form__label">Label voor tekstveld
+								        	{{input class="input-field input-field--block u-spacer--bottom--tiny" value="Label voor tekstveld"}}
+								        </label>
+
+								        <div class="grid">
+								        	<div class="col--3-12">
+								        		{{wu-checkbox class="checkbox--small" label="Verplicht"}}
+								        	</div>
+								        	<div class="col--3-12">
+								        		{{wu-checkbox class="checkbox--small" label="Beschrijving"}}
+								        	</div>
+								        	<div class="col--6-12 u-align-right--tablet-portrait-up">
+								        	</div>
+								        </div>
+								      </div>
+							      </div>
+							    </div>
+								</div>
+					    </div>
+
+							<div class="form-field__footer">
+								<div class="grid">
+									<div class="col--5-12">
+										<button class="button button--small button--alt button--alt--blue button--icon button--circle">
+											<i class="fa fa-plus button__icon"></i>
+											<span class="button--circle__text">Voeg veld toe aan subgroep</span>
+										</button>
+									</div>
+									<div class="col--7-12">
+										<button class="button button--small button--alt button--alt--blue button--icon button--circle">
+											<i class="fa fa-plus button__icon"></i>
+											<span class="button--circle__text">Voeg conditionele veldengroep toe</span>
+										</button>
+									</div>
+								</div>
+							</div>
+				    </div>
+				  </div>
+
+					<div class="form-field__footer">
+						<div class="grid">
+							<div class="col--6-12">
+								<button class="button button--small button--alt button--alt--blue button--icon button--circle">
+									<i class="fa fa-plus button__icon"></i>
+									<span class="button--circle__text">Voeg veld toe aan groep</span>
+								</button>
+							</div>
+							<div class="col--6-12">
+								<button class="button button--small button--alt button--alt--blue button--icon button--circle">
+									<i class="fa fa-plus button__icon"></i>
+									<span class="button--circle__text">Voeg conditionele veldengroep toe</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!--- buttons -->
+
+				<div class="u-padding--rl--small u-padding--tb">
+					<div class="grid">
+						<div class="col--6-12">
+							<button class="button button--icon button--circle">
+								<i class="fa fa-plus button__icon"></i>
+								<span class="button--circle__text">Voeg veld toe aan formulier</span>
+							</button>
+						</div>
+						<div class="col--6-12">
+							<button class="button button--alt button--icon button--circle">
+								<i class="fa fa-plus button__icon"></i>
+								<span class="button--circle__text">Voeg conditionele veldengroep toe</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col--6-12">
+			<div class="u-background--gray-lightest container-flex--scroll u-padding--round">
+				<div class="u-spacer u-border--light--bottom">
+					<h1 class="h6 uppercase">Formulier: Besluitenlijst</h1>
+					<p class="text-fade u-spacer--bottom--tiny">Type dossier dat doorgestuurd wordt: Besluitenlijst</p>
+				</div>
+				<form class="form">
+					<div class="form__row">
+		    		<label class="form__label">Tekstveld label
+		        	{{input class="input-field input-field--block"}}
+	       		</label>
+		      </div>
+					<div class="form__row">
+		    		<label class="form__label">Dropdown label
+							<select class="select select--small select--block" id="select-demo" name="select">
+							  <option value=""></option>
+								<option value="1">Gemeente</option>
+								<option value="2">District</option>
+								<option value="3">Provincie</option>
+							</select>
+	       		</label>
+		      </div>
+
+	        <div class="form__row">
+		    		<label class="form__label">Radioknoppen label</label>
+	        	{{wu-radio-button label="Ja" name="radio-buttons" value="1" class="radio--block"}}
+	        	{{wu-radio-button label="Nee" name="radio-buttons" value="2" class="radio--block"}}
+					</div>
+
+	        <div class="form__row">
+		    		<label class="form__label">Checkbox label</label>
+	        	{{wu-checkbox label="Ja" class="checkbox--block"}}
+	        	{{wu-checkbox label="Nee" class="checkbox--block"}}
+					</div>
+
+	        <div class="form__row">
+	      		<label class="form__label">Textarea label
+	      			{{textarea cols="40" rows="4" class="textarea textarea--block"}}
+		        </label>
+		      </div>
+
+					<div class="form__row">
+	      		<label class="form__label">Documenten opladen label</label>
+						<div data-upload-allow-drop=""  class="upload js-upload js-upload-bound">
+						 	<div class="upload__element">
+						 		<label class="upload__element__label">
+						 			<i class="vi vi-paperclip"></i>
+						 			<span>Bestanden toevoegen</span>
+						 			<small>Sleep de bestanden naar hier om toe te voegen</small>
+						 			<label for="file-input-2ddce" class="file-upload">
+						 				<input id="file-input-2ddce" multiple="" hidden="" type="file">
+						 			</label>
+						 		</label>
+						  </div>
+						</div>
+					</div>
+
+					<div class="form__row form__row--file-addresses">
+						<label class="form__label">Links naar documenten label</label>
+						<div class="form__input">
+							<div>
+								<div class="form__row u-padding--tb--tinier">
+									<table class="data-table u-spacer--bottom--tiny">
+										<tbody data-test-mn="url-box-list">
+											<tr>
+												<td>
+													<div class="u-align-center">
+													 	<p class="u-spacer--tb--tiny">Nog geen links toegevoegd.</p>
+								            <button class="button u-spacer--bottom--tiny">
+								              <i class="vi vi-plus button__icon" aria-hidden="true"></i> Voeg nieuwe link toe
+								            </button>
+								            <div>
+								            	<p class="small u-spacer--top--tiny">Enkel links naar specifieke documenten, geen overzichtspagina's.</p>
+								            	<p class="small u-spacer--bottom--tiny"><sup>*</sup>Op het moment van versturen, wordt er een versie<br>
+								            	gedownload van de pagina die op de link te vinden is.</p>
+								            </div>
+								          </div>
+								        </td>
+								      </tr>
+								    </tbody>
+								  </table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form__row form__row--taxrates-input">
+						<div class="form__label">
+							<label class="form__label" form="orgaan">Aanslagvoet label</label>
+						</div>
+						<div class="form__input">
+							<div class="ember-view">
+								<table class="data-table data-table--zebra data-table--tight u-spacer">
+									<thead>
+								    <tr>
+								      <th>Bedrag</th>
+								      <th>Eenheid</th>
+								      <th>Basis</th>
+								      <th>Commentaar</th>
+								      <th>&nbsp;</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								  	<tr>
+								  		<td colspan="5" class="data-table__add-row u-align-center">
+								  			<a class="button button--narrow u-spacer--tb--small" role="button" data-ember-action="" data-ember-action-389="389">
+								  				<i class="vi vi-plus" aria-hidden="true"></i>Voeg aanslagvoet toe
+								  			</a>
+								    	</td>
+								    </tr>
+								  </tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="form__row form__row--date">
+						<div class="form__label">
+							<label class="form__label" form="orgaan">Datum label</label>
+						</div>
+						<div class="form__input">
+							<div class="is-required">
+								<form class="date-range__datepicker datepicker form">
+									<div class="datepicker">
+										<input data-datepicker="" placeholder="01-01-2019" class="input-field ember-text-field js-datepicker-bound input-field--datepicker" type="text">
+										<label for="ember227" class="datepicker__icon"></label>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="form__row form__row--date">
+						<div class="grid">
+							<div class="col--6-12">
+								<div class="form__label">
+									<label class="form__label" form="orgaan">Date range label 1</label>
+								</div>
+								<div class="form__input">
+									<div class="is-required">
+										<form class="date-range__datepicker datepicker form">
+											<div class="datepicker">
+												<input data-datepicker="" placeholder="01-01-2019" class="input-field ember-text-field js-datepicker-bound input-field--datepicker" type="text">
+												<label for="ember227" class="datepicker__icon"></label>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col--6-12">
+								<div class="form__label">
+									<label class="form__label" form="orgaan">Date range label 2</label>
+								</div>
+								<div class="form__input">
+									<div class="is-required">
+										<form class="date-range__datepicker datepicker form">
+											<div class="datepicker">
+												<input data-datepicker="" placeholder="01-01-2019" class="input-field ember-text-field js-datepicker-bound input-field--datepicker" type="text">
+												<label for="ember227" class="datepicker__icon"></label>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+	        <div class="form__row form__row--required">
+		    		<label class="form__label form__label--block">Tweede tekstveld label
+		        	{{input class="input-field input-field--block"}}
+		        </label>
+		        <p class="smaller u-spacer--top--tinier text-fade">Dit is wat informatie.</p>
+		      </div>
+
+		      <div class="form__row form__row--conditional-field">
+			      <div class="form__row form__row--conditional-field">
+			    		<label class="form__label">Label voor tekstveld
+			        	{{input class="input-field input-field--block"}}
+			        </label>
+			      </div>
+			      <div class="form__row form__row--conditional-field">
+			    		<label class="form__label">Label voor tekstveld
+			        	{{input class="input-field input-field--block"}}
+			        </label>
+			      </div>
+		      </div>
+
+		      <div class="form__row form__row--conditional-field">
+			      <div class="form__row form__row--conditional-field">
+			    		<label class="form__label">Label voor tekstveld
+			        	{{input class="input-field input-field--block"}}
+			        </label>
+			      </div>
+			      <div class="form__row form__row--conditional-field">
+			    		<label class="form__label">Label voor tekstveld
+			        	{{input class="input-field input-field--block"}}
+			        </label>
+			      </div>
+			      <div class="form__row form__row--conditional-field">
+			    		<label class="form__label">Label voor tekstveld
+			        	{{input class="input-field input-field--block"}}
+			        </label>
+			      </div>
+		      </div>
+
+	      </form>
+      </div>
+		</div>
+	</div>
+</div>
+{{outlet}}

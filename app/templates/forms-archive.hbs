@@ -1,0 +1,122 @@
+{{!-- {{title "Toezicht ABB"}} --}}
+{{!-- {{wu-widget src=header class="vo-header-widget"}} --}}
+<div class="u-border--light--bottom">
+	<ul class="inline-list inline-list--bordered smaller u-background--gray-lightest u-padding--rl--small u-padding--tb--tiny">
+		<li>{{#link-to "forms"}}Formulieren overzicht{{/link-to}}</li>
+		<li>Archief</li>
+	</ul>
+</div>
+
+<div class="grid grid--collapse">
+  <div class="{{if hasActiveChildRoute "col--7-12 u-hidden--tablet-portrait-up u-visible--tablet-landscape-up" "col--12-12"}}">
+    <div class="container-flex--contain">
+      <div class="u-border--fat--bottom u-hide-on-print">
+        <div class="u-padding--round--small">
+          <div class="grid">
+            <div class="col--6-12 col--1-1--s">
+              <h1 class="h2 u-spacer--right--small u-display-inline-block">
+	              Formulieren Bouwer Archief
+	            </h1>
+            </div>
+
+
+            <div class="col--6-12 col--1-1--s u-align-right--tablet-portrait-up">
+            	<div class="button-group">
+	            	{{#link-to "forms" class="button button--small button--narrow button--alt"}}
+	            		<i class="fa fa-chevron-left"></i>Terug naar overzicht
+	            	{{/link-to}}
+	            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="container-flex--scroll data-table-content">
+      	<table class="data-table">
+      		<thead>
+      			<tr class="data-table__header">
+	      			<th class="u-visible--tablet-landscape-up sortable">
+	      				<a class="data-table__header-title--sortable ">
+	      					Besluitenlijst
+	      					<span class="u-visually-hidden">Aflopend sorteren</span>
+	      					<i class="data-table__header-title__sort-icon vi-u-link-after vi-u-180deg vi-long-arrow vi"></i>
+	      				</a>
+	      			</th>
+	      			<th class="u-visible--tablet-landscape-up sortable">
+	      				<a class="data-table__header-title--sortable ">
+		      				Omschrijving
+		      				<span class="u-visually-hidden">Aflopend sorteren</span>
+		      				<i class="data-table__header-title__sort-icon vi-u-link-after vi-u-180deg vi-long-arrow vi"></i>
+		      			</a>
+		      		</th>
+		      		<th class="u-visible--tablet-portrait-up sortable">
+		      			<a class="data-table__header-title--sortable ">
+			      			Type besluit
+			      			<span class="u-visually-hidden">Aflopend sorteren</span>
+			      			<i class="data-table__header-title__sort-icon vi-u-link-after vi-u-180deg vi-long-arrow vi"></i>
+			      		</a>
+			      	</th>
+				      <th class="sortable">
+			      		<a class="data-table__header-title--sortable ">
+							 		Status
+							    <span class="u-visually-hidden">Aflopend sorteren</span>
+							    <i class="data-table__header-title__sort-icon vi-u-link-after vi-u-180deg vi-long-arrow vi"></i>
+								</a>
+							</th>
+							<th class="u-hide-on-print"><!-- Actions --></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Besluitenlijst</td>
+							<td style="max-width: 250px;">
+								Besturen sturen een besluitenlijst uit
+								<p class="u-spacer--top--tiny">
+									<span class="pill pill--small">Gemeente</span>
+									<span class="pill pill--small">District</span>
+								</p>
+							</td>
+							<td>
+								Besluitenlijst
+				      </td>
+				      <td>
+				      	<label class="pill pill--primary-yellow">Gedeactiveerd</label>
+				      </td>
+			      	<td class="u-hide-on-print u-align-right--tablet-portrait-up">
+				      	{{#link-to "form-builder.form-builder-blank" class="button button--narrow button--alt button--alt--blue button--link u-spacer--right--small"}}
+				      		<i class="fa fa-copy button__icon"></i>
+				      	{{/link-to}}
+				      	{{#link-to "form-builder.form-builder-blank"}}Bewerk{{/link-to}}
+				      </td>
+			      </tr>
+						<tr>
+							<td>Besluitenlijst</td>
+							<td style="max-width: 250px;">
+								Besturen sturen een besluitenlijst uit
+								<p class="u-spacer--top--tiny">
+									<span class="pill pill--small">Gemeente</span>
+									<span class="pill pill--small">District</span>
+								</p>
+							</td>
+							<td>
+								Besluitenlijst
+				      </td>
+				      <td>
+				      	<label class="pill pill--primary-yellow">Gedeactiveerd</label>
+				      </td>
+			      	<td class="u-hide-on-print u-align-right--tablet-portrait-up">
+				      	{{#link-to "form-builder.form-builder-blank" class="button button--narrow button--alt button--alt--blue button--link u-spacer--right--small"}}
+				      		<i class="fa fa-copy button__icon"></i>
+				      	{{/link-to}}
+				      	{{#link-to "form-builder.form-builder-blank"}}Bewerk{{/link-to}}
+				      </td>
+			      </tr>
+			    </tbody>
+			  </table>
+			</div>
+
+	    {{!-- {{toezicht/inzendingen-table class="container-flex--contain" model=model isLoading=isLoadingModel sort=sort page=page size=size displaySubset=hasActiveChildRoute}} --}}
+    </div>
+  </div>
+  {{outlet}}
+</div>

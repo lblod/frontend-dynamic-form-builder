@@ -1,0 +1,84 @@
+{{!-- {{title "Toezicht ABB"}} --}}
+{{!-- {{wu-widget src=header class="vo-header-widget"}} --}}
+<div class="grid grid--collapse">
+  <div class="{{if hasActiveChildRoute "col--7-12 u-hidden--tablet-portrait-up u-visible--tablet-landscape-up" "col--12-12"}}">
+    <div class="container-flex--contain">
+      <div class="u-border--fat--bottom u-hide-on-print">
+        <div class="layout u-padding--round--small">
+          <div class="grid">
+            <div class="col--8-12 col--1-1--s">
+              <h1 class="h3 sans-serif u-spacer--right--small u-display-inline-block">
+	              Bewerk gegevens formulier "Besluitenlijst"
+	            </h1>
+            </div>
+
+            <div class="col--4-12 col--1-1--s u-align-right--tablet-portrait-up">
+            	<div class="button-group">
+	            	{{#link-to "form-builder.form-builder-blank" class="link--icon--close"}}
+		            	<span class="u-visually-hidden">Venster sluiten</span>
+	            	{{/link-to}}
+	            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="container-flex--scroll">
+        <div class="u-padding--round--large">
+	      	<div class="grid">
+	      		<div class="col--7-12">
+		        	<div class="u-spacer">
+		        		<label class="form__label">Naam van het formulier
+				        	{{input class="input-field input-field--block" value="Besluitenlijst"}}
+				        </label>
+			        </div>
+
+		        	<div class="u-spacer">
+		        		<label class="form__label">Omschrijving
+				        	{{textarea cols="40" rows="4" class="textarea textarea--block" value="Korte omschrijving"}}
+				        </label>
+				        <p><small>Gebruik een naam die consistent is met het type dossier dat doorgestuurd wordt.</small></p>
+			        </div>
+			      </div>
+
+	      		<div class="col--12-12">
+		        	<label class="u-spacer--bottom--tiny u-display--block">Van toepassing op volgende groepen</label>
+			      	<div class="grid">
+			      		<div class="col--4-12">
+					      	<div>{{wu-checkbox label="Gemeente"}}</div>
+									<div>{{wu-checkbox label="District"}}</div>
+									<div>{{wu-checkbox label="Provincie"}}</div>
+									<br>
+									<div>{{wu-checkbox label="Intergemeentelijke samenwerking (IGS)"}}</div>
+									<div>{{wu-checkbox label="Hulpverleningszone (HVZ)"}}</div>
+									<div>{{wu-checkbox label="Politiezone (PZ)"}}</div>
+					      </div>
+			      		<div class="col--4-12">
+									<div>{{wu-checkbox label="Openbaar Centrum voor Maatschappelijk Welzijn (OCMW)"}}</div>
+									<div>{{wu-checkbox label="Openbaar Centrum voor Maatschappelijk Welzijn Vereniging (OCMWV)"}}</div>
+					      </div>
+			      		<div class="col--4-12">
+									<div>{{wu-checkbox label="Autonoom Gemeentebedrijf (AGB)"}}</div>
+									<div>{{wu-checkbox label="Autonome Provinciebedrijven  (APB)"}}</div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+      	</div>
+			</div>
+      <div class="u-border--top">
+        <div class="u-padding--round--small">
+        	<div class="button-group">
+          	{{#link-to "form-builder.form-builder-blank" class="button button--narrow"}}
+          		Bewaar
+          	{{/link-to}}
+          	{{#link-to "form-builder.form-builder-blank" class="button button--narrow button--alt"}}
+          		Verwerp wijzigingen
+          	{{/link-to}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{outlet}}
+</div>
